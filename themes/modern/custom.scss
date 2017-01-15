@@ -563,3 +563,70 @@ div {
         width: 0.75*$width;
     }
 }
+
+// Web Transcript
+@media print {
+  .pagebodydiv {
+    margin: 0;
+    padding: 0;
+    border: none;
+  }
+  .headerwrapperdiv, .whitespace1 {
+    display: none;
+  }
+  a, a:link, a:visited {
+    //display: none; // This would remove the navigation links at the top
+    color:black;
+  }
+  table {
+    page-break-inside: auto;
+  }
+  tr {
+    page-break-inside: avoid;
+    page-break-after: auto;
+  }
+}
+$titleBG: #ab6363;
+$printGray: #b5b5b5;
+$headerBG: #464040;
+.datadisplaytable {
+  max-width: 100%;
+  width: auto;
+  .dddefault p {
+    margin: 0;
+  }
+  .ddtitle {
+    background-color: $titleBG;
+    padding: 5px;
+    color: #fff;
+    a:link, a:visited {
+      color:$printGray;
+    }
+    a:hover {
+      color: #fff;
+    }
+  }
+  .ddheader {
+    background-color: #464040;
+    color: #fff;
+  }
+  .ddseparator {
+    color: #bfbfbf;
+    .infotext {
+      color: #bfbfbf;
+    }
+    border: none;
+    background-color: #fff;
+  }
+  .ddlabel {
+    border: none;
+    background-color: #fff;
+  }
+  th, td {
+    border-bottom: 1px solid #ddd;
+    padding: 3px;
+  }
+  tr {
+    margin:0;
+  }
+}
