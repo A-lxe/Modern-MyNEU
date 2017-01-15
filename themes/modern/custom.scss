@@ -612,6 +612,7 @@ div {
 $titleBG: #ab6363;
 $printGray: #b5b5b5;
 $headerBG: #464040;
+$lightText: #bfbfbf;
 .datadisplaytable {
   max-width: 100%;
   width: auto;
@@ -630,13 +631,13 @@ $headerBG: #464040;
     }
   }
   .ddheader {
-    background-color: #464040;
+    background-color: $headerBG;
     color: #fff;
   }
   .ddseparator {
-    color: #bfbfbf;
+    color: $lightText;
     .infotext {
-      color: #bfbfbf;
+      color: $lightText;
     }
     border: none;
     background-color: #fff;
@@ -644,6 +645,9 @@ $headerBG: #464040;
   .ddlabel {
     border: none;
     background-color: #fff;
+  }
+  .indefault {
+    border: none;
   }
   th, td {
     border-bottom: 1px solid #ddd;
